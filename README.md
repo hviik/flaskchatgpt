@@ -8,16 +8,14 @@ git clone https://github.com/hviik/flaskchatgpt.git
 
 dependencies are flask and openai.
 
-Create a virtual environment:
-
-python3 -m venv env
-source env/bin/activate
-
 Set up OpenAI API credentials by obtaining an API key from OpenAI and adding it as an environment variable named OPENAI_API_KEY. 
 
 Run the application:
 
 python app.py
+
+paste the above in the root folder and it should execute.
+
 Access the web application by opening a web browser and navigating to http://localhost:5000.
 
 Test:
