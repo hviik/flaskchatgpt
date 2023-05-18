@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # API Key
 
-openai.api_key = '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'
+openai.api_key = 'yourKey'
 
 # Main function we use to connect to ChatGPT
 def generate_chat_response(message):
