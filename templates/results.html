@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Web App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .message-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .response-container {
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      .error-container {
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Results</h1>
+    <div class="message-container">
+      <p><strong>Message:</strong> {{ message }}</p>
+    </div>
+    {% if chat_response %}
+    <div class="response-container">
+      <p><strong>ChatGPT Response:</strong> {{ chat_response }}</p>
+    </div>
+    {% endif %}
+    {% if error_message %}
+    <div class="error-container">
+      <p><strong>Error:</strong> {{ error_message }}</p>
+    </div>
+    {% endif %}
+  </body>
+</html>

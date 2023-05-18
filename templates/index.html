@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        max-width: 100%;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .results-container {
+        text-align: center;
+      }
+
+      .response-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      .error-container {
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("message-form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var messageInput = document.getElementById("message-input");
+          var message = messageInput.value.trim();
+          if (message !== "") {
+            form.submit();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Flask Web App</h1>
+    <form id="message-form" action="/" method="POST">
+      <input
+        id="message-input"
+        type="text"
+        name="message"
+        placeholder="Enter your message"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
